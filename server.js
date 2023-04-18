@@ -6,6 +6,11 @@ const PORT = 8000
 app.use(cors())
 
 const languages = {
+    'unknown': {
+        'hours': 'unknown',
+        'yt channels': 'unknown',
+        'anki recs': 'unknown',
+    },
     'spanish': {
         'hours': 800,
         'yt channels': ['Dreaming Spanish', 'Mexicanos en China'],
