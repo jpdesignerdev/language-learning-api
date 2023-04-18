@@ -19,6 +19,10 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
 })
 
+app.get('/api', (req, res)=>{
+    res.json(languages)
+})
+
 app.get('/api/:language', (req, res)=>{
     const language = req.params.language.toLowerCase()
     if (languages[language]){
@@ -31,4 +35,3 @@ app.get('/api/:language', (req, res)=>{
 app.listen(process.env.PORT || PORT, ()=> {
     console.log(`Running on port ${process.env.PORT || PORT}.`)
   })
-  
