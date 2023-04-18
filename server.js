@@ -28,6 +28,6 @@ app.get('/api/:language', (req, res)=>{
     }
 })
 
-app.listen(proces.env.PORT || PORT, ()=> {
+app.listen(process.env.PORT || PORT, ()=> {
 console.log(`Running on port ${PORT}.`)
 })
